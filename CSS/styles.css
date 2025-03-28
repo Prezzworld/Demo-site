@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-size: 1.05rem;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    min-height: 80vh;
+    background: url(../images/hero.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    width: 90%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding-left: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover{
+    text-shadow: 2px 2px 5px 2px white;
+    transform: translateY(-5px);
+}
+
+.hero {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 30px 50% 30px 0px;
+    /* align-items: center; */
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.btn{
+    padding: 7px 20px;
+    background-color: #eee;
+    color: #222;
+    align-self: flex-start;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .btn:hover{
+    background-color: #1C1352;
+    color: white;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    transform: translate(-5px, -5px);
+}
+
+.hero .btn .fa-external-link{
+    padding-left: 5px;
+}
+
+#choose, #about{
+    margin-block: 5rem;
+    text-align: center;
+    color: #222;
+}
+
+.about h3, .choice h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#offer{
+    background-color: #1C1352;
+    color: white;
+    padding: 3.5rem 0px 2rem 0px;
+}
+
+.offers{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.offers .div i{
+    font-size: 3rem;
+    padding-bottom: 0.8rem;
+}
+
+.choice-text{
+    margin-bottom: 2rem;
+}
+
+.choice .btn{
+    background-color: transparent;
+    color: #1C1352;
+    padding: 10px 20px;
+    border: 1px solid #1C1352;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.choice .btn:hover{
+    transform: translate(0px, -5px);
+    box-shadow: 3px 3px 10px 2px #ccc;
+    background-color: #1C1352;
+    color: #fff;
+}
+
+#choose .btn i{
+    transition: transform 0.3s ease-in-out;
+}
+
+#choose .btn:hover i{
+    transform: translateX(5px);
+}
+
+footer{
+    background-color: #222;
+    padding-block: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+@media(max-width: 830px){
+    .hero h1{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 659px){
+    .hero {
+        text-align: center;
+        padding-inline: 10%;
+    }
+
+    .hero .btn{
+        align-self: center
+    }
+
+    .offers{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media(max-width: 415px){
+    .hero h1{
+        font-size: 1.5rem;
+    }
+
+    .hero p{
+        font-size: 14px;
+    }
+}
